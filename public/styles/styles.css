@@ -1,0 +1,502 @@
+:root{
+    --authors_background: #912143;
+    --books_background: #216391;
+}
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+.nav_bar {
+    display:flex;
+    flex-direction: row;
+}
+.nav_bar h1{
+    flex-basis: 40%;
+    margin-left: 100px;
+}
+nav{
+    flex-basis:60%;
+    margin-right:100px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+nav ul a:not(.logout){
+    text-decoration: none;
+    font-size:30px;
+    color:black;
+    font-family:monospace;
+}
+h3{
+    text-align:center;
+}
+.banner{
+    display: flex;
+    flex-direction:row;
+    height: 700px;
+    font-weight: bold;
+    justify-content: space-between;
+    overflow-x: clip;
+    overflow-y: auto;
+
+}
+.author_banner h1, .book_banner h1{
+    margin-bottom: 0;
+}
+.author_banner, .book_banner{
+    height: 850px;
+}
+.banner .genre_description{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.book_banner .description .genres, .author_banner .description .genres{
+    display: flex;
+    flex-direction: row;
+}
+
+.book_banner .description .genres .genre_grouping, .author_banner .description .genres .genre_grouping{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+
+}
+.genres .genre_grouping input{
+    width: 10px;
+    height: 10px;
+}
+.genres .genre_grouping label{
+    font-size: 20px !important;
+}
+.genre_creation{
+    flex-wrap:wrap;
+}
+.creation_banner{
+    height: 650px !important;
+}
+.creation_banner .feedback{
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+.banner_like_form{
+    width: 100% !important;
+}
+.genre_description li{
+    margin-left: 60px;
+}
+.authors_banner, .author_banner{
+    background: var(--authors_background);
+    color: white;
+}
+.books_banner, .book_banner{
+    background:var(--books_background);
+    color: white;
+}
+
+nav button, .logout{
+    background: var(--authors_background);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+}
+header .group_label_input{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+ul.login, form.login{
+    background:white;
+    position:absolute !important;
+    top: 90px;
+    right: 10px;
+    z-index:999;
+    border: 1px solid black;
+    padding: 20px;
+
+}
+form.login{
+    font-family:cursive;
+    width: 500px;
+    margin-left: 500px;
+}
+.align-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.login button{
+    width: 100%;
+    height: 50px;
+    background: var(--authors_background);
+    border-radius: 10px;
+    color: white;
+
+}
+
+.book_banner h1{
+    margin-top:0px;
+}
+.banner form{
+    height: 400px;
+    width: 800px;
+    margin: auto;
+    padding: 1px;
+}
+#banner_similarity{
+    width: 100% !important;
+}
+#author_search, #book_search{
+    font-size: 25px;
+    height: 50px;
+}
+.banner button{
+    height: 53px;
+    width: 150px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.breadcrumbs{
+    color:white;
+    font-size:17px;
+}
+.breadcrumbs a{
+    color:white;
+}
+.authors_banner button{
+    background: #216391;
+}
+.books_banner button{
+    background: #912143;
+}
+.banner .form_element{
+    padding: 0px 55px;
+}
+.banner h1{
+    font-size: 50px;
+    font-family:cursive;
+}
+.banner img{
+    height: 500px;
+    width: 400px;
+}
+.banner figure{
+    text-align: center;
+    margin-top: 40px;
+    width: 500px
+}
+.banner figcaption{
+    font-size: 20px;
+    color: white;
+}
+.banner figcaption a{
+    color: white;
+}
+.genres{
+    margin-top:50px;
+}
+.banner input:checked, .banner input:after{
+    background: black;
+}
+.genres h3{
+    font-size:35px;
+    font-family: cursive;
+    text-align: left !important;
+}
+.genre_grouping{
+    display: inline-block;
+    font-size: 20px;
+    margin:12px;
+    font-family: cursive;
+}
+main h1{
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap:wrap;
+    width:90%;
+    margin: 20px auto;
+    justify-content:space-evenly;
+    align-items:flex-start;
+}
+.container, .banner_container{
+    position: relative;
+}
+.container button{
+    position: absolute !important;
+    top: 45%;
+    left: 33%;
+}
+.banner_container input{
+    padding: 25px 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--authors_background);
+    position: absolute !important;
+    top: 50%;
+    left: 20%;
+}
+.author_banner .banner_container input{
+    background: var(--books_background);
+    left: 35%;
+}
+.gallery_item{
+    flex-basis:27%;
+}
+.author_gallery_item img{
+    border-radius:50%;
+    height:300px;
+    width:300px;
+}
+.book_gallery_item img{
+    height: 275px;
+    width: 175px;
+    display: block;
+    margin: auto;
+}
+.gallery_item figcaption{
+    text-align:center;
+    font-size:12px;
+}
+.gallery_item h3{
+    text-align: center;
+    font-size: 25px;
+}
+.gallery_item p{
+    font-size: 17px;
+    line-height:1.5em;
+    color: rgba(29,29,29,.7);
+}
+.description{
+    margin-left: 60px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.similar_books h1, .similar_authors h1, .books_by h1, .liked_books h1{
+    text-align:center;
+}
+.similar_books, .similar_authors, .books_by, .liked_books{
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+#book_unlike, .remove_similarity{
+    background: black !important;
+    color: white !important;
+    height:60px;
+}
+.entries{
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    flex-wrap: wrap;
+
+}
+
+.entry{
+    flex-basis: 30%;
+    margin: 20px 0;
+}
+.entries img{
+    height: 300px;
+    width:200px;
+    margin: auto;
+    display: block;
+}
+.entries figcaption{
+    text-align: center;
+}
+.hidden{
+    display: none !important;
+    position:unset !important;
+}
+.add_similarity_button_banner{
+    /* padding: 20px 35px;
+    color: var(--books_background);
+    /* background: white; */
+    border-radius: 10px;
+    margin: 20px auto;
+    color: var(--authors_background) !important;
+}
+
+
+#add_book, .add_similarity, .book_like, .book_delete, .edit_button_banner{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--authors_background);
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.edit_button_banner{
+    background: white !important;
+    color: var(--books_background);
+    padding: 15px 40px;
+    margin-top: 10px;
+    display:inline-block;
+    line-height: 250%;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.author_banner .edit_button_banner{
+    color: var(--authors_background) !important;
+}
+.add_similarity, .book_like{
+    width: 150px;
+    margin: auto;
+    display: block;
+}
+.book_banner .book_delete{
+    height: 80px;
+    margin-top: 10px;
+    width: 220px;
+}
+.banner .book_like{
+    margin-top: 20px;
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 80vw;
+    height: 70vh;
+    top: calc(50% - 35vh);
+    left: calc(50% - 40vw);
+    border: 2px solid black;
+    background: white;
+    overflow-y: scroll;
+}
+.popup_header{
+    display: flex;
+    height: 75px;
+    font-size: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--authors_background);
+    color: white;
+    margin-bottom: 40px;
+    padding: 10px 50px;
+}
+.popup_header button{
+    width: 150px;
+    height: 75px;
+    background: white;
+    color: var(--authors_background);
+    font-size: 70px;
+    border: 2px solid white;
+    border-radius: 10px;
+    line-height: 100%;
+    cursor: pointer;
+}
+.popup h1{
+    text-align: center;
+}
+.popup form{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.popup form .form_element{
+    font-family: cursive;
+    font-size: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.edit_book .form_element, .column2 .form_element{
+    display:flex;
+    flex-direction:column;
+    margin: 10px 0;
+}
+.edit_book label, .column2 label{
+    font-size: 30px;
+    margin-right: 20px;
+    vertical-align: top;
+}
+.edit_book input, .column2 input{
+    width: 400px;
+    font-size:20px !important;
+    padding-left: 10px;
+}
+.edit_book textarea, .column2 textarea{
+    font-size: 15px;
+    overflow-y: scroll;
+}
+.column2{
+    margin-top: 50px;
+}
+.popup form textarea{
+    overflow-y: scroll;
+}
+.popup form button, #submit_book_edit, #submit_author_edit{
+    width: 150px;
+    height: 75px;
+    background: var(--authors_background);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#submit_book_edit, #submit_author_edit{
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+}
+#submit_author_edit{
+    background: var(--books_background);
+}
+.disabled{
+    background: gray;
+    color: black !important;
+    pointer-events: none;
+    cursor: none;
+}
+.darken{
+    opacity: 0.5;
+    border: 1px solid black;
+}
+.gray{
+    height: 500px;
+    width: 400px;
+    background: gray;
+}
+
+.feedback{
+    color: red;
+    font-weight: bold;
+}
